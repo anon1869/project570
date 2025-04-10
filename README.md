@@ -28,6 +28,8 @@ source venv/bin/activate
 ### 3. Install Dependencies
 
 ```bash
+pip install torch
+pip install torch-scatter
 pip install -r requirements.txt
 ```
 
