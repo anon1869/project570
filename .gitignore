@@ -1,0 +1,5 @@
+.env
+venv
+tb_logs
+logs
+.idea
