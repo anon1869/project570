@@ -12,11 +12,13 @@ cd project570
 ```
 
 ### 2. Set Up a Virtual Environment
+
 ```bash
 # On Windows
 python -m venv venv
-venv\Scripts\activate
+source venv/Scripts/activate
 ```
+
 ```bash
 # On macOS/Linux
 python3 -m venv venv
@@ -24,12 +26,15 @@ source venv/bin/activate
 ```
 
 ### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Modify the Dataset Loader
+
 Open `faknow/data/dataset/multi_modal.py` and replace the `__getitem__` method with the code below. The file can be found at `~\venv\Lib\site-packages\faknow\data\dataset\multi_modal.py`.
+
 ```python
 def __getitem__(self, index) -> Dict[str, Any]:
     """
@@ -61,11 +66,15 @@ def __getitem__(self, index) -> Dict[str, Any]:
 
     return item
 ```
+
 Make sure to import the PIL library at the top of the `multi_modal.py` file as well.
+
 ```python
 from PIL import Image
 ```
+
 ### 5. Run an experiment
+
 ```bash
 # Options: keyword, random, or human
 python main.py keyword
