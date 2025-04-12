@@ -83,3 +83,8 @@ from PIL import Image
 # Options: keyword, random, or human
 python main.py keyword
 ```
+
+To use the `images.py` file, create a .env in the root folder with your pexels API key.
+```python
+PEXELS_API_KEY=YOUR_PEXELS_API_KEY
+```
